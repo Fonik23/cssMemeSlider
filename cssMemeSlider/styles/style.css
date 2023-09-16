@@ -147,3 +147,30 @@ label:active > .dot {
 #b4:checked ~ .text > .text__line > .margin-left{
     margin-left: -78%;
 }
+
+
+@media (max-width: 32em) {
+    .container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 75% 10% 15%;  
+    }
+
+    .slider {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+    }
+    .pagination{
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        align-items: center;
+    }
+    .text {
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+        
+    }
+
+    .text__line > p {
+        font-size: 0.8rem;
+    }
+}
