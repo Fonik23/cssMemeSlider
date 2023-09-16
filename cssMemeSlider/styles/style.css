@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color:transparent;
 }
 
 body {
@@ -70,8 +71,7 @@ body {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     justify-content: end;
-    display: flex;
-    
+    display: flex;  
 }
 
 input {
@@ -110,6 +110,7 @@ label:active > .dot {
 #b4:checked ~ .pagination > label[for='b4'] > .dot  {
     background-color: transparent;
     outline: 0.1rem solid #71acff;
+    transition: all 1s;
 }
 #b1:checked ~ .pagination > label[for='b1']:active > .dot,
 #b2:checked ~ .pagination > label[for='b2']:active > .dot,
@@ -117,6 +118,7 @@ label:active > .dot {
 #b4:checked ~ .pagination > label[for='b4']:active > .dot {
     background-color: transparent;
     outline: 0.1rem solid antiquewhite;
+    transition: all .7s;
 }
 
 #b1:checked ~ .slider > .slider__line > .margin-left{
