@@ -29,8 +29,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
   justify-content: end;
 }
 
@@ -48,7 +48,35 @@ body {
   min-height: 1rem;
   min-width: 1rem;
   border-radius: 50%;
-  background-color: blue;
+  border: 0.2rem solid orange;
+  background-color: orange;
+  transition: background-color .3s, border-color .3s;
+}
+
+#slide1:checked ~ .slider__tabs > .slider__label[for='slide1'] > .slider__tab,
+#slide2:checked ~ .slider__tabs > .slider__label[for='slide2'] > .slider__tab,
+#slide3:checked ~ .slider__tabs > .slider__label[for='slide3'] > .slider__tab,
+#slide4:checked ~ .slider__tabs > .slider__label[for='slide4'] > .slider__tab {
+  border: 0.2rem solid orange;
+  background-color: transparent;
+}
+
+#slide1:checked ~ .slider__tabs > .slider__label[for='slide1']:hover > .slider__tab,
+#slide2:checked ~ .slider__tabs > .slider__label[for='slide2']:hover > .slider__tab,
+#slide3:checked ~ .slider__tabs > .slider__label[for='slide3']:hover > .slider__tab,
+#slide4:checked ~ .slider__tabs > .slider__label[for='slide4']:hover > .slider__tab {
+  border: 0.2rem solid white;
+}
+
+.slider__label:hover > .slider__tab {
+  background-color: white;
+  border: 0.2rem solid white;
+}
+
+.slider__label:active > .slider__tab {
+  transition: none;
+  background-color: rgb(241, 236, 236);;
+  border: 0.2rem solid rgb(241, 236, 236);
 }
 
 .slider__inner {
